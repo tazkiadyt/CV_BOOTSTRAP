@@ -11,7 +11,7 @@
         <div class="row" id="header">
             <div class="col-8">
                 <div class="row">
-                    <h1>Tazkia Hidayatuloh Al Mahrom</h1>
+                    <h1 style="font-family: Lucida Calligraphy;">Tazkia Hidayatuloh Al Mahrom</h1>
                     <div></div>
                 </div>
                 <div class="row">
@@ -19,26 +19,87 @@
                 </div>
             </div>
             <div class="col-4">
-                <img src="main-qimg-8cab683fc677bb67beb9e0e0f60db75f-lq.jpeg" alt="foto urang" style="height: 125px; margin-top: 10px;" >
+              <img src="main-qimg-8cab683fc677bb67beb9e0e0f60db75f-lq.jpeg" alt="foto urang" style="height: 125px; margin-top: 10px;" >
             </div>
         </div>
         <div class="row" id="navigasi">
-            <ul class="nav nav-pills nav-fill">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Much longer nav link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-              </ul>
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" onclick="navigation('Profile')">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="navigation('Edu')">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="navigation('Exp')">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="navigation('Skills')">Skills</a>  
+            </li>
+          </ul>
+        </div>
+        <div class="row" id="Profile">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">Tempat Lahir</th>
+                <td>Ciamis</td>
+              </tr>
+              <tr>
+                <th scope="row">Tanggal Lahir</th>
+                <td>10 Maret 2004</td>
+              </tr>
+              <tr>
+                <th scope="row">Kewarganegaraan</th>
+                <td>Indonesia</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="row" id="Education">
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="Experience">
+          Ini Experience
+        </div>
+        <div class="row" id="Skills">
+          Ini Skills
         </div>
     </div>
+    <script>
+       function navigation(id){
+      //  alert('Cek id: '+id);
+      if(id === 'Profile'){
+        document.getElementById('Profile').style.display = 'block';
+        document.getElementById('Education').style.display = 'none';
+        document.getElementById('Experience').style.display = 'none';
+        document.getElementById('Skills').style.display = 'none';
+      }else if(id === 'Edu'){
+        document.getElementById('Education').style.display = 'block';
+        document.getElementById('Profile').style.display = 'none';
+        document.getElementById('Experience').style.display = 'none';
+        document.getElementById('Skills').style.display = 'none';
+      }else if(id === 'Exp'){
+        document.getElementById('Experience').style.display = 'block';
+        document.getElementById('Profile').style.display = 'none';
+        document.getElementById('Education').style.display = 'none';
+        document.getElementById('Skills').style.display = 'none';
+       }
+       else if(id === 'Skills'){
+        document.getElementById('Skills').style.display = 'block';
+        document.getElementById('Profile').style.display = 'none';
+        document.getElementById('Education').style.display = 'none';
+        document.getElementById('Experience').style.display = 'none';
+      }
+     }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
